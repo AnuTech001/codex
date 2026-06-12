@@ -1,0 +1,161 @@
+/* ---------- [ Root ] ---------- */
+
+:root {
+  /* [ Tamanhos para textos ] */
+  --paragrafo: clamp(1.5rem, 2.5vw, 2rem);
+  --titulo: clamp(2rem, 3vw, 3rem);
+  /* [ Espaços ] */
+  --margem: clamp(15px, 3vw, 20px);
+  --preenchimento: clamp(10px, 2vw, 20px);
+  /* [ Tamanhos para imagens ] */
+  --img: clamp(100px, 10vw, 200px);
+}
+
+/* ---------- [ Base ] ----------*/
+
+* {
+  color: white;
+  font-size: 100%;
+  scroll-behavior: smooth;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  font-family: "VT323", "Press Start 2P";
+}
+
+body {
+  background-color: black;
+}
+
+header,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--preenchimento);
+  border-bottom: 2px solid #00ff00;
+  margin-bottom: var(--margem);
+}
+
+footer {
+  border-top: 2px solid #00ff00;
+  border-bottom: none;
+}
+
+img {
+  height: var(--img);
+}
+
+/* ---------- [ Tipografia ] ----------*/
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: var(--titulo);
+  color: #00ffff;
+}
+
+p,
+ul {
+  font-size: var(--paragrafo);
+}
+
+ul {
+  list-style: square;
+  margin: var(--margem);
+}
+
+strong {
+  color: yellow;
+}
+
+.conteudo p {
+  margin-bottom: var(--margem);
+}
+
+/* ---------- [ divs ] ---------- */
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  margin: var(--margem);
+  padding: var(--preenchimento);
+}
+
+/* ---------- [ Scrollbar ] ---------- */
+
+::-webkit-scrollbar {
+  width: 0.5rem; /* equivale a 8px */
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+  border: 0.125rem solid white; /* equivale a 2px */
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border: 0.125rem solid white; /* equivale a 2px */
+  border-radius: 0.25rem; /* equivale a 4px */
+}
+
+input,
+button {
+  font-family: "Press Start 2P", cursive;
+  background: #111;
+  color: #0f0;
+  border: 2px solid #0f0;
+  padding: var(--preenchimento);
+  margin: var(--margem);
+}
+
+button:hover,
+input:hover {
+  background: #0f0;
+  color: #000;
+  cursor: pointer;
+}
+
+.resultado {
+  margin-top: var(--margem);
+  font-size: var(--paragrafo);
+  color: #0f0;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imagem {
+  height: clamp(100px, 10vw, 200px);
+  border-radius: 10px;
+}
+
+@media (max-width: 655px) {
+  body {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3 {
+    font-size: 1.5rem;
+  }
+  p,
+  ul {
+    font-size: 1.25rem;
+  }
+  .card {
+    margin: 0 var(--margem);
+  }
+}
